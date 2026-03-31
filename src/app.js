@@ -29,6 +29,8 @@ app.post('/deploy-webhook', (req, res) => {
     if (data.ref !== 'refs/heads/main') {
         return res.status(200).json({ message: "Not main branch, skipping deploy." });
     }
+
+    console.log("Deployment started");
     res.status(202).json({ message: "Deployment started" });
     // executeDeployScript()
     //     .then((output) => console.log("Deploy Success:", output))
