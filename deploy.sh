@@ -16,12 +16,12 @@ echo "Pulling latest code..."
 git pull origin main
 
 echo "Pulling latest Docker image..."
-docker pull shuvo173/khalid_bin_arif_aiaas-api-gateway-service1.0.0
+sudo docker pull shuvo173/khalid_bin_arif_aiaas-api-gateway-service1.0.0
 
 echo "Restarting containers..."
-docker-compose up -d
+sudo docker-compose up -d
 
 echo "Cleaning unused images..."
-docker image prune -f
+sudo docker image prune -f
 
 echo "Deployment done 🚀"
