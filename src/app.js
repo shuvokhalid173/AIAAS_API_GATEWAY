@@ -18,8 +18,8 @@ app.get("/new", (req, res) => {
     res.status(200).json({ message: "OK New" });
 });
 
-app.get("/test", (req, res) => {
-    res.status(200).json({ message: "OK Test Deployment done " + process.pid });
+app.get("/cicd", (req, res) => {
+    res.status(200).json({ message: "CICD is working" + process.pid });
 });
 
 app.post('/deploy-webhook', (req, res) => {
@@ -50,3 +50,5 @@ async function executeDeployScript() {
     return stdout;
 }
 module.exports = app;
+
+
