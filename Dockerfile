@@ -7,7 +7,7 @@ RUN npm ci --only=production
 
 COPY . .
 
-EXPOSE ${PORT}
+EXPOSE 1111
 
 CMD ["node", "src/server.js"]
 
