@@ -19,7 +19,7 @@ app.get("/new", (req, res) => {
 });
 
 app.get("/test", (req, res) => {
-    res.status(200).json({ message: "OK Test" });
+    res.status(200).json({ message: "OK Test Deployment done 2" });
 });
 
 app.post('/deploy-webhook', (req, res) => {
