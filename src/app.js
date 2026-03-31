@@ -18,7 +18,7 @@ app.get("/new", (req, res) => {
     res.status(200).json({ message: "OK New" });
 });
 
-app.get("test", (req, res) => {
+app.get("/test", (req, res) => {
     res.status(200).json({ message: "OK Test" });
 });
 
