@@ -20,14 +20,15 @@ app.get("/new", (req, res) => {
 
 app.post('/deploy-webhook', (req, res) => {
     const data = req.body;
+    console.log(data);
 
     if (data.ref !== 'refs/heads/main') {
         return res.status(200).json({ message: "Not main branch, skipping deploy." });
     }
     res.status(202).json({ message: "Deployment started" });
-    executeDeployScript()
-        .then((output) => console.log("Deploy Success:", output))
-        .catch((err) => console.error("Deploy Failed:", err.message));
+    // executeDeployScript()
+    //     .then((output) => console.log("Deploy Success:", output))
+    //     .catch((err) => console.error("Deploy Failed:", err.message));
 });
 
 async function executeDeployScript() {
