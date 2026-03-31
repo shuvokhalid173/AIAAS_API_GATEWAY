@@ -1,11 +1,14 @@
 version: "3.9"
 
 services:
-
   aiaas_api_gateway_service:
-    build: .
+    image: shuvo173/khalid_bin_arif_aiaas-api-gateway-service1.0.0
     container_name: aiaas_api_gateway_service
     restart: always
+    env_file:
+      - .env
+    ports:
+      - "${PORT}:${PORT}"
 
   nginx:
     image: nginx:latest
