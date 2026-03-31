@@ -19,7 +19,7 @@ app.get("/new", (req, res) => {
 });
 
 app.get("/cicd-test", (req, res) => {
-    res.status(200).json({ message: "CICD-Github-action is working perfectly.  " + process.pid });
+    res.status(200).json({ message: "CICD-Github-action is working perfectly.  fine ." + process.pid });
 });
 
 app.post('/deploy-webhook', (req, res) => {
