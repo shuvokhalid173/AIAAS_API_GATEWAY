@@ -18,6 +18,10 @@ app.get("/new", (req, res) => {
     res.status(200).json({ message: "OK New" });
 });
 
+app.get("test", (req, res) => {
+    res.status(200).json({ message: "OK Test" });
+});
+
 app.post('/deploy-webhook', (req, res) => {
     const data = req.body;
 
