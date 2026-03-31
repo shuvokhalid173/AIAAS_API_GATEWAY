@@ -20,7 +20,6 @@ app.get("/new", (req, res) => {
 
 app.post('/deploy-webhook', (req, res) => {
     const data = req.body;
-    console.log(data);
 
     if (!data || !data.ref) {
         return res.status(400).json({ message: "Invalid request" });
