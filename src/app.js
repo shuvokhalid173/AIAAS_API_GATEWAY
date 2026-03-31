@@ -31,13 +31,14 @@ app.post('/deploy-webhook', (req, res) => {
 
     console.log("Deployment started");
     res.status(202).json({ message: "Deployment started" });
-    // executeDeployScript()
-    //     .then((output) => console.log("Deploy Success:", output))
-    //     .catch((err) => console.error("Deploy Failed:", err.message));
+    executeDeployScript()
+        .then((output) => console.log("Deploy Success:", output))
+        .catch((err) => console.error("Deploy Failed:", err.message));
 });
 
 async function executeDeployScript() {
     const scriptPath = path.join(__dirname, '../deploy.sh');
+    console.log(scriptPath);
     const { stdout, stderr } = await execPromise(`sh ${scriptPath}`);
     if (stderr) {
         console.warn("Script Warning:", stderr);
